@@ -1,0 +1,200 @@
+body {
+  width: 100%;
+  max-width: 50rem;
+  margin: auto;
+}
+
+header {
+  background: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 15px 10px;
+}
+
+main {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+section {
+  padding: 0 2rem;
+}
+
+button {
+  background: white;
+  color: black;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  padding: 5px 20px;
+}
+
+button:hover {
+  background: #96b37b;
+  color: white;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  padding: 5px 20px;
+}
+
+button.square {
+  border-radius: 5px;
+}
+
+button.rounded {
+  border-radius: 25px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+#list {
+  position: relative;
+}
+#list.loading {
+  height: 100vh;
+}
+#list.loading:after {
+  content: '... 로딩중 ...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#filter {
+  display: flex;
+  justify-content: space-around;
+  margin: 14px 0;
+}
+
+/** 라디오 버튼 */
+.filter-checkbox-button {
+  color: black;
+  background: white;
+  border: 1.5px solid lightgray;
+  border-radius: 5px;
+  padding: 5px 25px;
+  user-select: none;
+}
+.filter-checkbox-button:hover {
+  color: black;
+  background: white;
+  border: 1.5px solid #999487;
+  border-radius: 5px;
+  padding: 5px 25px;
+}
+
+.filter-checkbox-button.is-checked {
+  color: #fff;
+  background-color: #c4beae;
+  border-color: lightgray;
+  border-radius: 5px;
+  padding: 5px 25px;
+}
+
+.filter-checkbox-button > input {
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 1rem 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card > .left {
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card > .left > div {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.5rem;
+}
+
+.card > .left > .series {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.2rem;
+}
+.card > .right {
+  width: 13%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  header {
+    padding: 5px 0;
+  }
+
+  section {
+    padding: 0 0.1rem;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+
+  button:hover {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+
+  .card {
+    border: 1px solid black;
+    padding: 1rem 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .card > .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card > .left > div {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1.2rem;
+  }
+
+  .card > .left > .series {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.2rem;
+  }
+  .card > .right {
+    width: 100%;
+    text-align: right;
+  }
+}

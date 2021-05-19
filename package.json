@@ -1,0 +1,48 @@
+{
+  "name": "musinsa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/node": "^14.14.33",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "html-webpack-plugin": "^4.5.1",
+    "http-server": "^0.12.3",
+    "prettier": "^2.3.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.2.4",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.11.1"
+  },
+  "scripts": {
+    "serve": "webpack-dev-server --config webpack.dev.js --mode development --open",
+    "build": "rm -rf dist && webpack --config webpack.prod.js --mode production",
+    "preview": "npm run build && http-server dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devist/book-board.git"
+  },
+  "author": "Donghwan, Oh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devist/book-board/issues"
+  },
+  "homepage": "https://github.com/Devist/book-board#readme"
+}
